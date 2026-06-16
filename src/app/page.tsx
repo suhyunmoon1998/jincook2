@@ -54,7 +54,7 @@ export default function Home() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative flex items-end overflow-hidden" style={{ minHeight: "100svh" }}>
         <div className="absolute inset-0">
-          <video src="/jincook.mp4" autoPlay loop muted playsInline
+          <video src="/jincook.mp4" autoPlay loop muted playsInline aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/50 via-transparent to-transparent" />
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-beige/50">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-beige/50" aria-hidden="true">
           <svg className="h-5 w-5 animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>

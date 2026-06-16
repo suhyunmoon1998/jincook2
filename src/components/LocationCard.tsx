@@ -1,3 +1,5 @@
+import OpenStatus from "@/components/OpenStatus";
+
 interface LocationCardProps {
   name: string;
   fullName: string;
@@ -64,6 +66,9 @@ export default function LocationCard({
         </div>
 
         <div className="border-t border-beige/10 pt-3 flex flex-col gap-1">
+          <div className="mb-2">
+            <OpenStatus hours={hours} />
+          </div>
           {hours.map((h) => (
             <p key={h} className="font-grotesk text-[12px] text-beige/40 leading-relaxed">
               {h}
