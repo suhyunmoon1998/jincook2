@@ -55,7 +55,7 @@ export default function Home() {
       <section className="relative flex items-end overflow-hidden" style={{ minHeight: "100svh" }}>
         <div className="absolute inset-0">
           <video src="/jincook.mp4" autoPlay loop muted playsInline aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover" />
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/50 via-transparent to-transparent" />
         </div>

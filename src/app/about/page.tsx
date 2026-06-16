@@ -57,7 +57,7 @@ export default function AboutPage() {
       <section className="relative flex items-end overflow-hidden bg-ink" style={{ minHeight: "80vh" }}>
         <div className="absolute inset-0">
           <video src="/jincook.mp4" autoPlay loop muted playsInline aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover opacity-50" />
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/20" />
         </div>
         <div className="relative z-10 w-full mx-auto max-w-8xl px-6 md:px-10 lg:px-20 pb-20 lg:pb-28">
