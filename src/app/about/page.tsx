@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 export const metadata: Metadata = {
   title: "Our Story | Jin Cook",
@@ -74,15 +75,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-            {/* Logo card */}
-            <div className="relative rounded-2xl overflow-hidden bg-ink min-h-[460px] flex items-center justify-center">
-              <img
-                src="/logo.png"
-                alt=""
-                aria-hidden="true"
-                className="w-[65%] max-w-[280px] opacity-[0.08] select-none pointer-events-none"
-              />
-            </div>
+            <PhotoCarousel />
 
             <div className="flex flex-col gap-7">
               <div>
@@ -152,6 +145,47 @@ export default function AboutPage() {
                 </h3>
                 <p className="font-grotesk text-[15px] text-ink/60 leading-[1.85]">{item.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Reviews ──────────────────────────────────────── */}
+      <section className="py-20 lg:py-28 bg-ink relative overflow-hidden">
+        <span aria-hidden="true" className="absolute right-10 top-1/2 -translate-y-1/2 font-brush text-[200px] text-background/[0.03] leading-none select-none pointer-events-none">맛</span>
+        <div className="relative z-10 mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
+          <div className="mb-12">
+            <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.18em] text-orange mb-3">
+              What People Are Saying · Yelp ★★★★★
+            </p>
+            <h2 className="font-brush text-[36px] lg:text-[48px] text-background leading-none">
+              Straight from Our Guests
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: "Rommel J.", date: "Oct 2025", text: "If you want some Korean soul food then this place is for you. Everything is so clean and the service is super friendly." },
+              { name: "Amy K.", date: "Feb 2026", text: "Everything was amazing — the flavors were rich and satisfying. All of the dishes and side dishes feel traditional and also seem very healthy." },
+              { name: "Jason Y.", date: "Feb 2026", text: "Braised short rib was tender and fall off the bone. The seafood pancake had crispy edges and chunks of seafood in every bite." },
+              { name: "Diana C.", date: "Dec 2025", text: "This is the kind of meal you crave when you want something warm, filling, and full of flavor." },
+              { name: "V B.", date: "Dec 2025", text: "Service and food is 100% all the time. We love the bulgogi and the fried dumplings." },
+            ].map((r) => (
+              <figure key={r.name} className="flex flex-col gap-4 rounded-2xl bg-background/5 border border-beige/10 px-6 py-5">
+                <div className="flex gap-0.5" aria-label="5 out of 5 stars">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-3.5 h-3.5 text-orange" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <blockquote className="font-grotesk text-[14px] text-beige/70 leading-[1.8] flex-1">
+                  &ldquo;{r.text}&rdquo;
+                </blockquote>
+                <figcaption className="flex items-center justify-between">
+                  <span className="font-grotesk text-[12px] font-bold text-background">{r.name}</span>
+                  <span className="font-grotesk text-[11px] text-beige/30">{r.date}</span>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
