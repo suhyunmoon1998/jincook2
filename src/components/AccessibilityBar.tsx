@@ -6,13 +6,16 @@ const options = [
   { id: "high-contrast", label: "Contrast +" },
   { id: "highlight-links", label: "Highlight Links" },
   { id: "bigger-text", label: "Bigger Text" },
+  { id: "oversized-widget", label: "Oversized Widget" },
   { id: "text-spacing", label: "Text Spacing" },
+  { id: "text-align", label: "Text Align" },
+  { id: "line-height", label: "Line Height" },
   { id: "reduce-motion", label: "Pause Animations" },
+  { id: "saturation", label: "Saturation" },
   { id: "hide-images", label: "Hide Images" },
   { id: "dyslexia-font", label: "Dyslexia Friendly" },
   { id: "custom-cursor", label: "Cursor" },
   { id: "tooltips", label: "Tooltips" },
-  { id: "line-height", label: "Line Height 1.5×" },
 ];
 
 export default function AccessibilityBar() {
@@ -30,6 +33,13 @@ export default function AccessibilityBar() {
         document.documentElement.classList.add(id);
       }
       return next;
+    });
+  };
+
+  const resetAll = () => {
+    setActive((prev) => {
+      prev.forEach((id) => document.documentElement.classList.remove(id));
+      return new Set();
     });
   };
 
@@ -64,6 +74,14 @@ export default function AccessibilityBar() {
                 {opt.label}
               </button>
             ))}
+            {active.size > 0 && (
+              <button
+                onClick={resetAll}
+                className="w-full text-center px-3 py-2.5 sm:py-2 mt-1 rounded-lg border border-beige/20 font-grotesk text-[12px] font-bold uppercase tracking-[0.08em] text-beige/50 hover:text-beige hover:border-beige/40 transition-colors"
+              >
+                Reset All
+              </button>
+            )}
           </div>
         </div>
       )}
