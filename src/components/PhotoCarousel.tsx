@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 
 const photos = [
-  { src: "/photos/food-2.jpg", alt: "Hot stone bibimbap" },
   { src: "/photos/food-4.jpg", alt: "Katsu with rice and banchan" },
   { src: "/photos/food-5.jpg", alt: "Curry katsu hot stone" },
   { src: "/photos/food-6.jpg", alt: "Bibimbap and bulgogi table spread" },
