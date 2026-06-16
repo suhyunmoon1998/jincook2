@@ -123,6 +123,7 @@ export default function Home() {
 
       {/* ── Philosophy ───────────────────────────────────── */}
       <section className="bg-green py-24 lg:py-32 relative overflow-hidden">
+        <img src="/hanok.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-[0.07] mix-blend-luminosity pointer-events-none select-none" />
         <span className="absolute right-0 top-0 bottom-0 flex items-center font-brush text-[220px] leading-none text-beige/[0.07] select-none pointer-events-none pr-8">
           한식
         </span>

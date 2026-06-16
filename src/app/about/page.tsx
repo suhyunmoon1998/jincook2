@@ -109,6 +109,7 @@ export default function AboutPage() {
 
       {/* ── 5000 years ───────────────────────────────────── */}
       <section className="bg-ink py-20 lg:py-24 text-center relative overflow-hidden">
+        <img src="/hanok.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-[0.09] mix-blend-luminosity pointer-events-none select-none" />
         <div className="absolute inset-0 opacity-[0.035] flex items-center justify-center pointer-events-none">
           <span className="font-brush text-[320px] text-background leading-none">한</span>
         </div>
