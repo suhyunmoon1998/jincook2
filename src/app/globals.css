@@ -24,12 +24,22 @@ body {
 }
 
 /* Accessibility */
-html.high-contrast {
-  filter: contrast(1.5);
-}
-html.bigger-text {
-  font-size: 112.5%;
-}
+
+/* Text size — 4 levels */
+html.bigger-text-1 { font-size: 110%; }
+html.bigger-text-2 { font-size: 122%; }
+html.bigger-text-3 { font-size: 136%; }
+html.bigger-text-4 { font-size: 150%; }
+
+/* Contrast modes — mutually exclusive */
+html.invert-colors { filter: invert(1); }
+html.dark-contrast  { filter: invert(1) hue-rotate(180deg) contrast(1.5); }
+html.light-contrast { filter: contrast(2) brightness(1.05); }
+
+/* Contrast + saturation combos */
+html.invert-colors.saturation  { filter: invert(1) grayscale(0.85); }
+html.dark-contrast.saturation  { filter: invert(1) hue-rotate(180deg) contrast(1.5) grayscale(0.85); }
+html.light-contrast.saturation { filter: contrast(2) brightness(1.05) grayscale(0.85); }
 html.dyslexia-font body,
 html.dyslexia-font * {
   font-family: "Comic Sans MS", cursive !important;
