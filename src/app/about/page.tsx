@@ -74,30 +74,14 @@ export default function AboutPage() {
         <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-            {/* Stats card */}
-            <div className="relative rounded-2xl overflow-hidden bg-ink min-h-[460px] flex flex-col justify-between p-8 lg:p-10">
-              <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center opacity-[0.06]">
-                <span className="font-brush text-[220px] text-background leading-none">진</span>
-              </span>
-              <span className="relative font-grotesk text-[10px] font-bold uppercase tracking-[0.22em] text-orange">
-                Jin Cook · Los Angeles
-              </span>
-              <div className="relative flex flex-col gap-7">
-                <div className="flex gap-0">
-                  <div className="flex-1">
-                    <div className="font-brush text-[80px] text-background leading-none">3</div>
-                    <div className="font-grotesk text-[11px] font-bold uppercase tracking-[0.14em] text-beige/40 mt-1">Locations</div>
-                  </div>
-                  <div className="w-px bg-beige/10 mx-6" />
-                  <div className="flex-1">
-                    <div className="font-brush text-[80px] text-orange leading-none">5K</div>
-                    <div className="font-grotesk text-[11px] font-bold uppercase tracking-[0.14em] text-beige/40 mt-1">Yrs of Tradition</div>
-                  </div>
-                </div>
-                <blockquote className="font-brush text-[21px] text-background/55 leading-snug border-t border-beige/10 pt-6">
-                  &ldquo;Every dish we serve has earned its place by doing one simple thing: bringing people the feeling of home.&rdquo;
-                </blockquote>
-              </div>
+            {/* Logo card */}
+            <div className="relative rounded-2xl overflow-hidden bg-ink min-h-[460px] flex items-center justify-center">
+              <img
+                src="/logo.png"
+                alt=""
+                aria-hidden="true"
+                className="w-[65%] max-w-[280px] opacity-[0.08] select-none pointer-events-none"
+              />
             </div>
 
             <div className="flex flex-col gap-7">
