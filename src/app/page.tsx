@@ -13,6 +13,7 @@ const locations = [
     mapEmbedUrl: "https://maps.google.com/maps?q=310+N+Brand+Blvd+Glendale+CA+91203&output=embed&z=15",
     instagram: "@jincook_glendale",
     instagramUrl: "https://www.instagram.com/jincook_glendale/",
+    orderUrl: "https://order.toasttab.com/online/jincook",
   },
   {
     name: "Santa Monica",
@@ -24,6 +25,7 @@ const locations = [
     mapEmbedUrl: "https://maps.google.com/maps?q=3001+Wilshire+Blvd+Santa+Monica+CA+90403&output=embed&z=15",
     instagram: "@jincook_santamonica",
     instagramUrl: "https://www.instagram.com/jincook_santamonica/",
+    orderUrl: "https://order.toasttab.com/online/jincook-santa-monica",
   },
   {
     name: "Downtown LA",
@@ -35,6 +37,7 @@ const locations = [
     mapEmbedUrl: "https://maps.google.com/maps?q=337+E+1st+St+Los+Angeles+CA+90012&output=embed&z=15",
     instagram: "@jincookdtla",
     instagramUrl: "https://www.instagram.com/jincookdtla",
+    orderUrl: "https://order.toasttab.com/online/jincook-dtlt",
   },
 ];
 
