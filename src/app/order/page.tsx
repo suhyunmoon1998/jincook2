@@ -115,7 +115,7 @@ export default function OrderPage() {
 
                 <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer"
                   className="text-center font-grotesk text-[11px] font-bold uppercase tracking-[0.08em] text-beige/30 hover:text-orange transition-colors">
-                  Get Directions ↗
+                  Get Directions
                 </a>
               </div>
             </article>

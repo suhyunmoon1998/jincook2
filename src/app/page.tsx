@@ -110,7 +110,7 @@ export default function Home() {
             </div>
             <Link href="/contact"
               className="font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-beige/50 hover:text-orange transition-colors self-start sm:self-auto">
-              View All Locations →
+              View All Locations
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -138,7 +138,7 @@ export default function Home() {
               </blockquote>
               <Link href="/about"
                 className="inline-flex items-center gap-2 rounded-full border border-background/30 hover:border-background/70 px-7 py-3 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-background hover:bg-background/10 active:scale-[0.97] transition-all">
-                Our Story →
+                Our Story
               </Link>
             </div>
             <p className="font-grotesk text-[15px] lg:text-[16px] text-beige/70 leading-[1.9] max-w-[520px]">

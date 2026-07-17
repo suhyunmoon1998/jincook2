@@ -100,7 +100,7 @@ export default function AboutPage() {
               </div>
               <Link href="/order"
                 className="btn-korean self-start inline-flex items-center gap-2 rounded-full px-8 py-3.5 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97]">
-                Order Now →
+                Order Now
               </Link>
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function AboutPage() {
         <div className="relative z-10 mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
           <div className="mb-8 lg:mb-12">
             <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.18em] text-orange mb-3">
-              What People Are Saying · Yelp ★★★★★
+              What People Are Saying · Yelp
             </p>
             <h2 className="font-brush text-[32px] lg:text-[48px] text-background leading-none">
               Straight from Our Guests

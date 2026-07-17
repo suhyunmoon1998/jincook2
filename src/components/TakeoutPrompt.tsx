@@ -31,9 +31,11 @@ export default function TakeoutPrompt() {
           ref={dismissRef}
           onClick={() => setDismissed(true)}
           aria-label="Dismiss order prompt"
-          className="absolute top-3 right-3 text-beige/40 hover:text-beige text-lg leading-none"
+          className="absolute top-3 right-3 text-beige/40 hover:text-beige p-1"
         >
-          ✕
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+            <path d="M1 1l10 10M11 1L1 11"/>
+          </svg>
         </button>
         <p className="font-grotesk text-[11px] font-bold uppercase tracking-widest text-orange mb-1">
           Ready to order?

@@ -14,6 +14,13 @@ export default function IntroVideo() {
     document.body.style.overflow = "hidden";
   }, []);
 
+  useEffect(() => {
+    if (!visible) return;
+    const video = videoRef.current;
+    if (!video) return;
+    video.play().catch(() => {});
+  }, [visible]);
+
   function dismiss() {
     setFading(true);
     setTimeout(() => {
@@ -33,19 +40,20 @@ export default function IntroVideo() {
       <video
         ref={videoRef}
         src="/jincook2.mp4"
-        autoPlay
         muted
         playsInline
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
-        onCanPlay={(e) => { (e.target as HTMLVideoElement).playbackRate = 2; }}
+        onCanPlay={(e) => {
+          try { (e.target as HTMLVideoElement).playbackRate = 2; } catch {}
+        }}
         onEnded={dismiss}
       />
       <button
         onClick={dismiss}
         className="absolute bottom-6 right-6 min-h-[44px] px-4 flex items-center font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background/60 hover:text-background transition-colors"
       >
-        Skip ↓
+        Skip
       </button>
     </div>
   );

@@ -84,7 +84,6 @@ export default function LocationCard({
             className="inline-flex items-center justify-center gap-2 rounded-full bg-orange hover:bg-[#f08040] px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
           >
             Order Online
-            <span aria-hidden="true">↗</span>
             <span className="sr-only"> (opens in new tab)</span>
           </a>
           <div className="flex items-center justify-between">
@@ -95,7 +94,6 @@ export default function LocationCard({
               className="inline-flex items-center gap-2 rounded-full bg-background/10 hover:bg-background/20 px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-background transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
             >
               Get Directions
-              <span aria-hidden="true">↗</span>
               <span className="sr-only"> (opens in new tab)</span>
             </a>
             <a

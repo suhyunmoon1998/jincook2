@@ -105,7 +105,7 @@ export default function ContactPage() {
 
                 <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-background/8 hover:bg-orange px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-background hover:text-ink transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange">
-                  Get Directions ↗
+                  Get Directions
                   <span className="sr-only"> (opens in new tab)</span>
                 </a>
               </div>

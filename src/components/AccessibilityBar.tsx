@@ -99,10 +99,12 @@ export default function AccessibilityBar() {
             </p>
             <button
               onClick={() => setOpen(false)}
-              className="text-beige/40 hover:text-beige text-lg leading-none sm:hidden"
+              className="text-beige/40 hover:text-beige sm:hidden p-1"
               aria-label="Close accessibility panel"
             >
-              ✕
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M1 1l10 10M11 1L1 11"/>
+              </svg>
             </button>
           </div>
 

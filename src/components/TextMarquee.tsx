@@ -13,7 +13,7 @@ const dishes = [
   "Seafood Ramyun",
 ];
 
-const sep = <span className="opacity-40">·</span>;
+const sep = <span className="opacity-40 mx-1">/</span>;
 
 export default function TextMarquee() {
   const items = [...dishes, ...dishes];
