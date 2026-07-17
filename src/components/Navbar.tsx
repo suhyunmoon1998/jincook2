@@ -99,7 +99,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-grotesk text-base font-medium uppercase tracking-[0.03em] text-background opacity-90 hover:opacity-100 py-1"
+              className="font-grotesk text-base font-medium uppercase tracking-[0.03em] text-background opacity-90 hover:opacity-100 py-3"
             >
               {link.label}
             </Link>

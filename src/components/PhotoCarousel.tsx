@@ -21,7 +21,7 @@ export default function PhotoCarousel() {
 
   return (
     <div
-      className="relative rounded-2xl overflow-hidden bg-ink min-h-[460px]"
+      className="relative rounded-2xl overflow-hidden bg-ink min-h-[280px] sm:min-h-[460px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

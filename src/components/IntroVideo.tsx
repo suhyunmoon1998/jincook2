@@ -43,7 +43,7 @@ export default function IntroVideo() {
       />
       <button
         onClick={dismiss}
-        className="absolute bottom-8 right-8 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-background/60 hover:text-background transition-colors"
+        className="absolute bottom-6 right-6 min-h-[44px] px-4 flex items-center font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background/60 hover:text-background transition-colors"
       >
         Skip ↓
       </button>

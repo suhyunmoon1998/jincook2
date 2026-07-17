@@ -65,16 +65,16 @@ export default function Home() {
             <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.2em] text-orange mb-5">
               Authentic Korean Soul Food · Los Angeles
             </p>
-            <h1 className="font-brush text-[52px] sm:text-[68px] lg:text-[90px] text-background leading-[1.1] mb-8">
+            <h1 className="font-brush text-[40px] sm:text-[56px] lg:text-[90px] text-background leading-[1.1] mb-8">
               Where Korean Tradition Meets the LA Table
             </h1>
             <div className="flex flex-wrap gap-3">
               <Link href="/order"
-                className="btn-korean inline-flex items-center justify-center rounded-full px-9 py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background">
+                className="btn-korean inline-flex items-center justify-center rounded-full px-6 py-3.5 sm:px-9 sm:py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background">
                 Order Now
               </Link>
               <Link href="/about"
-                className="inline-flex items-center justify-center rounded-full border border-background/40 px-9 py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background hover:border-background/80 hover:bg-background/10 active:scale-[0.97] transition-all">
+                className="inline-flex items-center justify-center rounded-full border border-background/40 px-6 py-3.5 sm:px-9 sm:py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background hover:border-background/80 hover:bg-background/10 active:scale-[0.97] transition-all">
                 Our Story
               </Link>
             </div>
@@ -94,12 +94,12 @@ export default function Home() {
       </div>
 
       {/* ── Locations ────────────────────────────────────── */}
-      <section className="bg-ink py-20 lg:py-28 overflow-hidden relative">
+      <section className="bg-ink py-14 lg:py-28 overflow-hidden relative">
         <div className="pointer-events-none select-none absolute inset-0 flex items-center justify-center opacity-[0.03]">
           <span className="font-brush text-[260px] text-background leading-none">진쿡</span>
         </div>
         <div className="relative z-10 mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 lg:mb-12">
             <div>
               <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.16em] text-orange mb-2">
                 Our Locations
@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* ── Philosophy ───────────────────────────────────── */}
-      <section className="bg-green py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-green py-14 lg:py-32 relative overflow-hidden">
         <img src="/hanok.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-[0.07] mix-blend-luminosity pointer-events-none select-none" />
         <span className="absolute right-0 top-0 bottom-0 flex items-center font-brush text-[220px] leading-none text-beige/[0.07] select-none pointer-events-none pr-8">
           한식
@@ -133,7 +133,7 @@ export default function Home() {
               <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.18em] text-orange mb-6">
                 한식의 유래 · The Roots of Korean Cuisine
               </p>
-              <blockquote className="font-brush text-[28px] sm:text-[34px] lg:text-[42px] text-background leading-[1.25] mb-8">
+              <blockquote className="font-brush text-[26px] sm:text-[34px] lg:text-[42px] text-background leading-[1.25] mb-6 lg:mb-8">
                 &ldquo;Five thousand years of tradition — in every bowl.&rdquo;
               </blockquote>
               <Link href="/about"
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* ── Instagram ────────────────────────────────────── */}
-      <section className="bg-background py-20 lg:py-24">
+      <section className="bg-background py-12 lg:py-24">
         <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10">
             <div>
@@ -161,7 +161,7 @@ export default function Home() {
               </h2>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {instagramProfiles.map((p) => (
               <a key={p.handle} href={p.url} target="_blank" rel="noopener noreferrer"
                 className="group flex items-center gap-4 rounded-xl border border-ink/10 hover:border-orange/40 bg-beige/40 hover:bg-beige/80 px-6 py-5 transition-all duration-200 active:scale-[0.97]">

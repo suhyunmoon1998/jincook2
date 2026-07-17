@@ -71,9 +71,9 @@ export default function AboutPage() {
       </section>
 
       {/* ── Origin story ─────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-14 lg:py-32 bg-background">
         <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-24 items-center">
 
             <PhotoCarousel />
 
@@ -117,7 +117,7 @@ export default function AboutPage() {
           <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.2em] text-orange mb-5">
             한식의 유래 · The Roots of Korean Cuisine
           </p>
-          <h2 className="font-brush text-[40px] sm:text-[52px] lg:text-[64px] text-background leading-[1.1] mb-6">
+          <h2 className="font-brush text-[34px] sm:text-[48px] lg:text-[64px] text-background leading-[1.1] mb-6">
             Five Thousand Years on the Table
           </h2>
           <p className="font-grotesk text-[15px] text-background/45 leading-relaxed max-w-[520px] mx-auto">
@@ -127,14 +127,14 @@ export default function AboutPage() {
       </section>
 
       {/* ── History pillars ──────────────────────────────── */}
-      <section className="bg-background py-20 lg:py-28 relative overflow-hidden">
+      <section className="bg-background py-12 lg:py-28 relative overflow-hidden">
         <span className="absolute right-8 top-1/2 -translate-y-1/2 font-brush text-[220px] lg:text-[300px] leading-none select-none pointer-events-none opacity-[0.04] text-ink">
           식
         </span>
         <div className="relative z-10 mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
           <div className="flex flex-col divide-y divide-ink/8">
             {history.map((item) => (
-              <div key={item.number} className="grid lg:grid-cols-[100px_1fr_1.2fr] gap-6 lg:gap-16 items-start py-12">
+              <div key={item.number} className="grid lg:grid-cols-[100px_1fr_1.2fr] gap-4 lg:gap-16 items-start py-8 lg:py-12">
                 <div className="flex items-center gap-3 lg:flex-col lg:items-start lg:gap-1">
                   <span className="font-grotesk text-[11px] font-bold text-ink/25 tracking-[0.12em]">{item.number}</span>
                   <span className="font-brush text-[32px] text-orange leading-none">{item.ko}</span>
@@ -152,14 +152,14 @@ export default function AboutPage() {
       </section>
 
       {/* ── Reviews ──────────────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-ink relative overflow-hidden">
+      <section className="py-12 lg:py-28 bg-ink relative overflow-hidden">
         <span aria-hidden="true" className="absolute right-10 top-1/2 -translate-y-1/2 font-brush text-[200px] text-background/[0.03] leading-none select-none pointer-events-none">맛</span>
         <div className="relative z-10 mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
-          <div className="mb-12">
+          <div className="mb-8 lg:mb-12">
             <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.18em] text-orange mb-3">
               What People Are Saying · Yelp ★★★★★
             </p>
-            <h2 className="font-brush text-[36px] lg:text-[48px] text-background leading-none">
+            <h2 className="font-brush text-[32px] lg:text-[48px] text-background leading-none">
               Straight from Our Guests
             </h2>
           </div>
@@ -193,19 +193,19 @@ export default function AboutPage() {
       </section>
 
       {/* ── Values ───────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-beige">
+      <section className="py-14 lg:py-32 bg-beige">
         <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
-          <div className="mb-16">
+          <div className="mb-10 lg:mb-16">
             <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.18em] text-orange mb-3">
               What We Believe
             </p>
-            <h2 className="font-brush text-[40px] lg:text-[52px] text-ink leading-none">
+            <h2 className="font-brush text-[32px] lg:text-[52px] text-ink leading-none">
               Our Values
             </h2>
           </div>
           <div className="flex flex-col divide-y divide-ink/10">
             {values.map((v) => (
-              <div key={v.ko} className="grid lg:grid-cols-[100px_1fr_1.2fr] gap-6 lg:gap-16 items-start py-10">
+              <div key={v.ko} className="grid lg:grid-cols-[100px_1fr_1.2fr] gap-4 lg:gap-16 items-start py-7 lg:py-10">
                 <span className="font-brush text-[36px] text-orange leading-none">{v.ko}</span>
                 <h3 className="font-brush text-[26px] lg:text-[30px] text-ink leading-tight">{v.en}</h3>
                 <p className="font-grotesk text-[15px] text-ink/60 leading-[1.85]">{v.desc}</p>
@@ -216,7 +216,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section className="py-24 lg:py-28 bg-ink relative overflow-hidden">
+      <section className="py-14 lg:py-28 bg-ink relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
           <span className="font-brush text-[280px] text-background leading-none">맛</span>
         </div>
