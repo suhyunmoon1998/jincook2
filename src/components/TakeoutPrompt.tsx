@@ -9,8 +9,8 @@ export default function TakeoutPrompt() {
   const [dismissed, setDismissed] = useState(false);
   const dismissRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
-  // Already on the menu or order page — the prompt would only be in the way.
-  const onOrderFlow = pathname.startsWith("/order") || pathname.startsWith("/menu");
+  // Already on the order page — the prompt would only be in the way.
+  const onOrderFlow = pathname.startsWith("/order");
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 15000);

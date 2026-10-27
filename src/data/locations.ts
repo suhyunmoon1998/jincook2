@@ -1,5 +1,5 @@
 // Single source of truth for all Jin Cook locations.
-// Used by the home page, /order, /contact and /menu — edit here only.
+// Used by the home page, /order and /contact — edit here only.
 
 export type LocationId = "glendale" | "santa-monica" | "dtla";
 

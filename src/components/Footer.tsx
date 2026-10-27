@@ -8,9 +8,6 @@ export default function Footer() {
           © {new Date().getFullYear()} Jin Cook. All rights reserved.
         </p>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
-          <Link href="/menu" className="font-grotesk text-xs text-beige/65 hover:text-beige transition-colors">
-            Menu
-          </Link>
           <Link href="/order" className="font-grotesk text-xs text-beige/65 hover:text-beige transition-colors">
             Order
           </Link>

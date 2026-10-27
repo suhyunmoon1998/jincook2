@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { locations, hoursLines } from "@/data/locations";
 
 export const metadata: Metadata = {
@@ -77,11 +76,6 @@ export default function OrderPage() {
                 </div>
 
                 <div className="flex items-center justify-center gap-6">
-                  <Link href={`/menu?location=${loc.id}`}
-                    className="font-grotesk text-[11px] font-bold uppercase tracking-[0.08em] text-beige/60 hover:text-orange transition-colors">
-                    View Menu
-                    <span className="sr-only"> for {loc.name}</span>
-                  </Link>
                   <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer"
                     className="font-grotesk text-[11px] font-bold uppercase tracking-[0.08em] text-beige/60 hover:text-orange transition-colors">
                     Get Directions

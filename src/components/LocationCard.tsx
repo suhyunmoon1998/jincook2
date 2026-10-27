@@ -1,9 +1,8 @@
-import Link from "next/link";
 import OpenStatus from "@/components/OpenStatus";
 import { hoursLines, type Location } from "@/data/locations";
 
 export default function LocationCard({ location }: { location: Location }) {
-  const { id, name, fullName, address, phone, mapsUrl, mapEmbedUrl, instagram, instagramUrl, pickupUrl } = location;
+  const { name, fullName, address, phone, mapsUrl, mapEmbedUrl, instagram, instagramUrl, pickupUrl, deliveryUrl } = location;
   const hours = hoursLines(location);
 
   return (
@@ -65,16 +64,18 @@ export default function LocationCard({ location }: { location: Location }) {
               rel="noopener noreferrer"
               className="btn btn-primary btn-sm"
             >
-              Order Online
+              Pickup
               <span className="sr-only"> from {name} (opens in new tab)</span>
             </a>
-            <Link
-              href={`/menu?location=${id}`}
+            <a
+              href={deliveryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-outline btn-sm"
             >
-              View Menu
-              <span className="sr-only"> for {name}</span>
-            </Link>
+              Delivery
+              <span className="sr-only"> from {name} (opens in new tab)</span>
+            </a>
           </div>
           <div className="flex items-center justify-between">
             <a

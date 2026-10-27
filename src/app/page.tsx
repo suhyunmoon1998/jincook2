@@ -35,10 +35,6 @@ export default function Home() {
                 className="btn btn-primary btn-lg">
                 Order Now
               </Link>
-              <Link href="/menu"
-                className="btn btn-outline btn-lg">
-                View Menu
-              </Link>
               <Link href="/about"
                 className="btn btn-ghost btn-lg">
                 Our Story
