@@ -52,9 +52,13 @@ export default function PhotoCarousel() {
             aria-selected={i === current}
             aria-label={`Photo ${i + 1}`}
             onClick={() => setCurrent(i)}
-            className="h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-            style={{ width: i === current ? "24px" : "6px", backgroundColor: i === current ? "white" : "rgba(255,255,255,0.35)" }}
-          />
+            className="group flex h-6 items-center px-0.5 focus-visible:outline-none"
+          >
+            <span
+              className="block h-1.5 rounded-full transition-all duration-300 group-hover:bg-white/70 group-focus-visible:ring-2 group-focus-visible:ring-white group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-ink"
+              style={{ width: i === current ? "24px" : "6px", backgroundColor: i === current ? "white" : "rgba(255,255,255,0.4)" }}
+            />
+          </button>
         ))}
       </div>
     </div>

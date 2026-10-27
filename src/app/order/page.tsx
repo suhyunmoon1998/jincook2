@@ -65,12 +65,12 @@ export default function OrderPage() {
                 {/* Order buttons */}
                 <div className="flex gap-3 pt-1">
                   <a href={loc.pickupUrl} target="_blank" rel="noopener noreferrer"
-                    className="flex-1 text-center btn-korean rounded-full py-3 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97] transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange">
+                    className="btn btn-primary flex-1">
                     Pickup
                     <span className="sr-only"> from {loc.name} (opens in new tab)</span>
                   </a>
                   <a href={loc.deliveryUrl} target="_blank" rel="noopener noreferrer"
-                    className="flex-1 text-center rounded-full border border-background/20 hover:border-background/60 py-3 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-background hover:bg-background/10 active:scale-[0.97] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange">
+                    className="btn btn-outline flex-1">
                     Delivery
                     <span className="sr-only"> from {loc.name} (opens in new tab)</span>
                   </a>

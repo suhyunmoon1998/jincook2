@@ -99,7 +99,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <Link href="/order"
-                className="btn-korean self-start inline-flex items-center gap-2 rounded-full px-8 py-3.5 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97]">
+                className="btn btn-primary self-start">
                 Order Now
               </Link>
             </div>
@@ -229,11 +229,11 @@ export default function AboutPage() {
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/order"
-              className="btn-korean inline-flex items-center justify-center rounded-full px-10 py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97]">
+              className="btn btn-primary btn-lg">
               Order Now
             </Link>
             <Link href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-background/30 hover:border-background/70 px-10 py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background hover:bg-background/10 active:scale-[0.97] transition-all">
+              className="btn btn-outline btn-lg">
               Find a Location
             </Link>
           </div>

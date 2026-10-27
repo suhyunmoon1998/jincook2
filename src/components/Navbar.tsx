@@ -82,7 +82,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/order"
-            className="btn-korean inline-flex items-center justify-center rounded-full px-6 py-2.5 font-grotesk text-[12px] font-bold uppercase tracking-[0.08em] text-ink active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+            className="btn btn-primary btn-sm"
           >
             Order Now
           </Link>
@@ -117,7 +117,7 @@ export default function Navbar() {
           <Link
             href="/order"
             onClick={() => setMenuOpen(false)}
-            className="btn-korean inline-flex items-center justify-center rounded-full px-6 py-3 font-grotesk text-[13px] font-bold uppercase tracking-[0.08em] text-ink mt-2"
+            className="btn btn-primary btn-block mt-2"
           >
             Order Now
           </Link>

@@ -104,10 +104,8 @@ export default function MenuExplorer({ initialLocation }: { initialLocation: Loc
                   type="button"
                   aria-pressed={selected}
                   onClick={() => selectLocation(loc.id)}
-                  className={`rounded-full px-3 py-3 font-grotesk text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] transition-all active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink ${
-                    selected
-                      ? "bg-orange text-ink"
-                      : "border border-background/25 text-background hover:border-background/60 hover:bg-background/10"
+                  className={`btn btn-sm min-h-11 whitespace-normal px-2 text-center leading-tight sm:px-4 ${
+                    selected ? "btn-primary" : "btn-outline"
                   }`}
                 >
                   {loc.name}
@@ -140,7 +138,7 @@ export default function MenuExplorer({ initialLocation }: { initialLocation: Loc
                 href={location.pickupUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-korean inline-flex items-center justify-center rounded-full px-7 py-3.5 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97] transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                className="btn btn-primary btn-lg"
               >
                 Order Pickup
                 <span className="sr-only"> from {location.name} (opens in new tab)</span>
@@ -149,7 +147,7 @@ export default function MenuExplorer({ initialLocation }: { initialLocation: Loc
                 href={location.deliveryUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-background/30 hover:border-background/70 hover:bg-background/10 px-7 py-3.5 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-background active:scale-[0.97] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                className="btn btn-outline btn-lg"
               >
                 Delivery
                 <span className="sr-only"> from {location.name} (opens in new tab)</span>
@@ -165,7 +163,7 @@ export default function MenuExplorer({ initialLocation }: { initialLocation: Loc
         <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 flex items-center gap-3 py-3">
           <a
             href="#location-picker"
-            className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.08em] text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
+            className="btn btn-dark btn-sm shrink-0 gap-1.5 px-3"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-orange" aria-hidden="true" />
             {location.name}
@@ -185,9 +183,7 @@ export default function MenuExplorer({ initialLocation }: { initialLocation: Loc
                   href={`#cat-${category.id}`}
                   data-chip={category.id}
                   aria-current={active ? "true" : undefined}
-                  className={`shrink-0 rounded-full px-4 py-1.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange ${
-                    active ? "bg-green text-background" : "text-ink/70 hover:bg-beige"
-                  }`}
+                  className="btn btn-chip shrink-0"
                 >
                   {category.label}
                 </a>
@@ -199,7 +195,7 @@ export default function MenuExplorer({ initialLocation }: { initialLocation: Loc
             href={location.pickupUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-korean shrink-0 inline-flex items-center justify-center rounded-full px-4 py-1.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97] transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
+            className="btn btn-primary btn-sm shrink-0"
           >
             Order
             <span className="sr-only"> pickup from {location.name} (opens in new tab)</span>

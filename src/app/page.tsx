@@ -32,15 +32,15 @@ export default function Home() {
             </h1>
             <div className="flex flex-wrap gap-3">
               <Link href="/order"
-                className="btn-korean inline-flex items-center justify-center rounded-full px-6 py-3.5 sm:px-9 sm:py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background">
+                className="btn btn-primary btn-lg">
                 Order Now
               </Link>
               <Link href="/menu"
-                className="inline-flex items-center justify-center rounded-full border border-background/40 px-6 py-3.5 sm:px-9 sm:py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background hover:border-background/80 hover:bg-background/10 active:scale-[0.97] transition-all">
+                className="btn btn-outline btn-lg">
                 View Menu
               </Link>
               <Link href="/about"
-                className="inline-flex items-center justify-center rounded-full px-4 py-3.5 sm:px-6 sm:py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background/70 hover:text-background underline-offset-4 hover:underline active:scale-[0.97] transition-all">
+                className="btn btn-ghost btn-lg">
                 Our Story
               </Link>
             </div>
@@ -103,7 +103,7 @@ export default function Home() {
                 &ldquo;Five thousand years of tradition — in every bowl.&rdquo;
               </blockquote>
               <Link href="/about"
-                className="inline-flex items-center gap-2 rounded-full border border-background/30 hover:border-background/70 px-7 py-3 font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-background hover:bg-background/10 active:scale-[0.97] transition-all">
+                className="btn btn-outline">
                 Our Story
               </Link>
             </div>

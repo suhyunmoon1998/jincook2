@@ -51,7 +51,7 @@ export default function TakeoutPrompt() {
           <Link
             href="/order"
             onClick={() => setDismissed(true)}
-            className="w-full text-center bg-orange text-ink font-grotesk text-sm font-semibold px-4 py-2.5 rounded-xl hover:bg-[#c95a1e] transition-colors"
+            className="btn btn-primary btn-block"
           >
             Take Out — Order Now
           </Link>
@@ -60,7 +60,7 @@ export default function TakeoutPrompt() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setDismissed(true)}
-            className="w-full text-center bg-white/10 text-beige font-grotesk text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-white/20 transition-colors flex items-center justify-center gap-2"
+            className="btn btn-soft btn-block"
           >
             <MapPinIcon />
             Find Near Jincook

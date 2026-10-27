@@ -114,7 +114,7 @@ export default function AccessibilityBar() {
             <button
               onClick={cycleText}
               aria-pressed={textLevel > 0}
-              className={`w-full text-left px-3 py-2.5 sm:py-2 rounded-lg font-grotesk text-[13px] sm:text-[12px] font-medium transition-colors flex items-center justify-between ${
+              className={`w-full text-left px-3 py-2.5 sm:py-2 rounded-lg font-grotesk text-[13px] sm:text-[12px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange flex items-center justify-between ${
                 textLevel > 0 ? "bg-orange text-ink" : "bg-white/10 text-beige hover:bg-white/20"
               }`}
             >
@@ -139,7 +139,7 @@ export default function AccessibilityBar() {
                 key={m.id}
                 onClick={() => toggleContrast(m.id)}
                 aria-pressed={contrastMode === m.id}
-                className={`w-full text-left px-3 py-2.5 sm:py-2 rounded-lg font-grotesk text-[13px] sm:text-[12px] font-medium transition-colors ${
+                className={`w-full text-left px-3 py-2.5 sm:py-2 rounded-lg font-grotesk text-[13px] sm:text-[12px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange ${
                   contrastMode === m.id ? "bg-orange text-ink" : "bg-white/10 text-beige hover:bg-white/20"
                 }`}
               >
@@ -151,7 +151,7 @@ export default function AccessibilityBar() {
             <button
               onClick={cycleSpacing}
               aria-pressed={spacingLevel > 0}
-              className={`w-full text-left px-3 py-2.5 sm:py-2 rounded-lg font-grotesk text-[13px] sm:text-[12px] font-medium transition-colors flex items-center justify-between ${
+              className={`w-full text-left px-3 py-2.5 sm:py-2 rounded-lg font-grotesk text-[13px] sm:text-[12px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange flex items-center justify-between ${
                 spacingLevel > 0 ? "bg-orange text-ink" : "bg-white/10 text-beige hover:bg-white/20"
               }`}
             >
@@ -176,7 +176,7 @@ export default function AccessibilityBar() {
                 key={opt.id}
                 onClick={() => toggle(opt.id)}
                 aria-pressed={active.has(opt.id)}
-                className={`w-full text-left px-3 py-2.5 sm:py-2 rounded-lg font-grotesk text-[13px] sm:text-[12px] font-medium transition-colors ${
+                className={`w-full text-left px-3 py-2.5 sm:py-2 rounded-lg font-grotesk text-[13px] sm:text-[12px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange ${
                   active.has(opt.id) ? "bg-orange text-ink" : "bg-white/10 text-beige hover:bg-white/20"
                 }`}
               >
@@ -188,7 +188,7 @@ export default function AccessibilityBar() {
             {hasAny && (
               <button
                 onClick={resetAll}
-                className="w-full text-center px-3 py-2.5 sm:py-2 mt-1 rounded-lg border border-beige/20 font-grotesk text-[12px] font-bold uppercase tracking-[0.08em] text-beige/50 hover:text-beige hover:border-beige/40 transition-colors"
+                className="btn btn-outline btn-sm btn-block mt-1 rounded-lg"
               >
                 Reset All
               </button>
@@ -201,7 +201,7 @@ export default function AccessibilityBar() {
         onClick={() => setOpen(!open)}
         aria-label="Accessibility options"
         aria-expanded={open}
-        className="w-12 h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
+        className="w-12 h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
         style={{ backgroundColor: open ? "#2b2416" : "#e06b2a", color: open ? "#e06b2a" : "#2b2416", border: "2px solid #e06b2a" }}
       >
         <AccessibilityIcon />

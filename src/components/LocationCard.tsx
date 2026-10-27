@@ -63,14 +63,14 @@ export default function LocationCard({ location }: { location: Location }) {
               href={pickupUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-korean inline-flex items-center justify-center rounded-full px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
+              className="btn btn-primary btn-sm"
             >
               Order Online
               <span className="sr-only"> from {name} (opens in new tab)</span>
             </a>
             <Link
               href={`/menu?location=${id}`}
-              className="inline-flex items-center justify-center rounded-full border border-background/30 hover:border-background/70 hover:bg-background/10 px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-background transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
+              className="btn btn-outline btn-sm"
             >
               View Menu
               <span className="sr-only"> for {name}</span>
@@ -81,7 +81,7 @@ export default function LocationCard({ location }: { location: Location }) {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-background/10 hover:bg-background/20 px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-background transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
+              className="btn btn-soft btn-sm"
             >
               Get Directions
               <span className="sr-only"> (opens in new tab)</span>
