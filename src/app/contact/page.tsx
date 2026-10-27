@@ -1,45 +1,10 @@
 import type { Metadata } from "next";
+import { locations } from "@/data/locations";
 
 export const metadata: Metadata = {
   title: "Locations | Jin Cook",
   description: "Find a Jin Cook near you in Glendale, Santa Monica, or Downtown LA.",
 };
-
-const locations = [
-  {
-    name: "Glendale",
-    address: "310 N Brand Blvd, Glendale, CA 91203",
-    phone: "(818) 637-7820",
-    hours: [
-      { label: "Mon–Thu", time: "11:30am–11pm" },
-      { label: "Fri–Sat", time: "11:30am–12am" },
-      { label: "Sun", time: "11:30am–11pm" },
-    ],
-    mapsUrl: "https://maps.google.com/?q=310+N+Brand+Blvd+Glendale+CA+91203",
-  },
-  {
-    name: "Santa Monica",
-    address: "3001 Wilshire Blvd Ste C, Santa Monica, CA 90403",
-    phone: "(310) 310-8014",
-    hours: [
-      { label: "Mon–Thu", time: "11:30am–10:30pm" },
-      { label: "Fri–Sat", time: "11:30am–12am" },
-      { label: "Sun", time: "11:30am–9:30pm" },
-    ],
-    mapsUrl: "https://maps.google.com/?q=3001+Wilshire+Blvd+Santa+Monica+CA+90403",
-  },
-  {
-    name: "Downtown LA",
-    address: "337 E 1st St, Los Angeles, CA 90012",
-    phone: "(213) 577-1128",
-    hours: [
-      { label: "Mon–Thu", time: "11:30am–10:30pm" },
-      { label: "Fri–Sat", time: "11:30am–12am" },
-      { label: "Sun", time: "11:30am–10:30pm" },
-    ],
-    mapsUrl: "https://maps.google.com/?q=337+E+1st+St+Los+Angeles+CA+90012",
-  },
-];
 
 export default function ContactPage() {
   return (
@@ -59,18 +24,18 @@ export default function ContactPage() {
       <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           {locations.map((loc) => (
-            <article key={loc.name}
+            <article key={loc.id}
               className="group flex flex-col rounded-2xl bg-background/5 border border-background/10 hover:border-orange/30 overflow-hidden transition-all duration-300">
 
               {/* Map embed */}
               <div className="relative w-full h-[220px] overflow-hidden">
                 <iframe
-                  src={`https://maps.google.com/maps?q=${encodeURIComponent(loc.address)}&output=embed&z=15`}
+                  src={loc.mapEmbedUrl}
                   width="100%" height="100%"
                   style={{ border: 0 }}
                   allowFullScreen loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title={`Map of Jin Cook ${loc.name}`}
+                  title={`Map of ${loc.fullName}`}
                   className="absolute inset-0 w-full h-full grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-ink/40 to-transparent pointer-events-none" />
@@ -82,7 +47,7 @@ export default function ContactPage() {
               {/* Info */}
               <div className="flex flex-col gap-4 p-6">
                 <div>
-                  <h2 className="font-brush text-[24px] text-background leading-tight">Jin Cook {loc.name}</h2>
+                  <h2 className="font-brush text-[24px] text-background leading-tight">{loc.fullName}</h2>
                   <p className="font-grotesk text-[13px] text-beige/60 mt-1 leading-snug">{loc.address}</p>
                   <a href={`tel:${loc.phone}`}
                     className="font-grotesk text-[13px] font-medium text-orange hover:text-[#f08040] transition-colors">
@@ -95,8 +60,8 @@ export default function ContactPage() {
                     <tbody>
                       {loc.hours.map((h) => (
                         <tr key={h.label}>
-                          <td className="font-grotesk text-[12px] text-beige/35 py-0.5 pr-4">{h.label}</td>
-                          <td className="font-grotesk text-[12px] text-beige/55 py-0.5 text-right">{h.time}</td>
+                          <td className="font-grotesk text-[12px] text-beige/65 py-0.5 pr-4">{h.label}</td>
+                          <td className="font-grotesk text-[12px] text-beige/75 py-0.5 text-right">{h.time}</td>
                         </tr>
                       ))}
                     </tbody>

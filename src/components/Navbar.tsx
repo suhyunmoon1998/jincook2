@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
+  { href: "/menu", label: "Menu" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Locations" },
 ];
@@ -21,6 +22,15 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
 
   // Home: transparent → bg-ink on scroll; other pages: bg-background border-b border-beige always
   const navBg = isHome

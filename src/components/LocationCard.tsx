@@ -1,30 +1,11 @@
+import Link from "next/link";
 import OpenStatus from "@/components/OpenStatus";
+import { hoursLines, type Location } from "@/data/locations";
 
-interface LocationCardProps {
-  name: string;
-  fullName: string;
-  address: string;
-  phone: string;
-  hours: string[];
-  mapsUrl: string;
-  mapEmbedUrl: string;
-  instagram: string;
-  instagramUrl: string;
-  orderUrl: string;
-}
+export default function LocationCard({ location }: { location: Location }) {
+  const { id, name, fullName, address, phone, mapsUrl, mapEmbedUrl, instagram, instagramUrl, pickupUrl } = location;
+  const hours = hoursLines(location);
 
-export default function LocationCard({
-  name,
-  fullName,
-  address,
-  phone,
-  hours,
-  mapsUrl,
-  mapEmbedUrl,
-  instagram,
-  instagramUrl,
-  orderUrl,
-}: LocationCardProps) {
   return (
     <article className="group flex flex-col rounded-2xl bg-ink overflow-hidden shadow-[0_4px_24px_rgba(43,36,22,0.18)] hover:shadow-[0_16px_48px_rgba(43,36,22,0.28)] transition-all duration-400">
 
@@ -70,22 +51,31 @@ export default function LocationCard({
             <OpenStatus hours={hours} />
           </div>
           {hours.map((h) => (
-            <p key={h} className="font-grotesk text-[12px] text-beige/40 leading-relaxed">
+            <p key={h} className="font-grotesk text-[12px] text-beige/65 leading-relaxed">
               {h}
             </p>
           ))}
         </div>
 
         <div className="flex flex-col gap-2 pt-1">
-          <a
-            href={orderUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-orange hover:bg-[#f08040] px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
-          >
-            Order Online
-            <span className="sr-only"> (opens in new tab)</span>
-          </a>
+          <div className="grid grid-cols-2 gap-2">
+            <a
+              href={pickupUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-korean inline-flex items-center justify-center rounded-full px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
+            >
+              Order Online
+              <span className="sr-only"> from {name} (opens in new tab)</span>
+            </a>
+            <Link
+              href={`/menu?location=${id}`}
+              className="inline-flex items-center justify-center rounded-full border border-background/30 hover:border-background/70 hover:bg-background/10 px-5 py-2.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em] text-background transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange"
+            >
+              View Menu
+              <span className="sr-only"> for {name}</span>
+            </Link>
+          </div>
           <div className="flex items-center justify-between">
             <a
               href={mapsUrl}
@@ -100,7 +90,7 @@ export default function LocationCard({
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-grotesk text-[11px] text-beige/30 hover:text-orange transition-colors"
+              className="font-grotesk text-[11px] text-beige/65 hover:text-orange transition-colors"
             >
               {instagram}
             </a>

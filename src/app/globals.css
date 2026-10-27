@@ -7,6 +7,12 @@
   --color-beige: #ede0c4;
   --color-ink: #2b2416;
   --color-white: #ffffff;
+  --color-sage: #8a9a6a;
+  --color-amber: #f2c07a;
+  --color-rule: #c4b48a;
+
+  /* `max-w-8xl` is used across the layout but was never defined in Tailwind 4 */
+  --container-8xl: 90rem;
 
   --font-grotesk: var(--font-space-grotesk), "Arial", sans-serif;
   --font-brush: var(--font-nanum-brush), cursive;
@@ -143,4 +149,25 @@ html.oversized-widget textarea {
 }
 .btn-korean:hover {
   background-color: #c95a1e;
+}
+
+/* Horizontal scrollers without a visible scrollbar (menu category chips) */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Retro perforated "stamp" edge — decorative divider between sections */
+.stamp-edge {
+  height: 8px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    currentColor 0,
+    currentColor 12px,
+    transparent 12px,
+    transparent 16px
+  );
+  opacity: 0.35;
 }

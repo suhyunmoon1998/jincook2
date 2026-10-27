@@ -1,48 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { locations, hoursLines } from "@/data/locations";
 
 export const metadata: Metadata = {
   title: "Order Online | Jin Cook Korean Restaurant",
   description: "Order Jin Cook online for pickup or delivery from Glendale, Santa Monica, or Downtown LA.",
 };
-
-const locations = [
-  {
-    id: "glendale",
-    name: "Glendale",
-    fullName: "Jin Cook Glendale",
-    address: "310 N Brand Blvd, Glendale, CA 91203",
-    phone: "(818) 637-7820",
-    hours: ["Mon–Thu 11:30am–11pm", "Fri–Sat 11:30am–12am", "Sun 11:30am–11pm"],
-    mapsUrl: "https://maps.google.com/?q=310+N+Brand+Blvd+Glendale+CA+91203",
-    mapEmbedUrl: "https://maps.google.com/maps?q=310+N+Brand+Blvd+Glendale+CA+91203&output=embed&z=15",
-    pickupUrl: "https://order.toasttab.com/online/jincook",
-    deliveryUrl: "https://www.doordash.com/store/1027295?src=yp&delivery=true",
-  },
-  {
-    id: "santa-monica",
-    name: "Santa Monica",
-    fullName: "Jin Cook Santa Monica",
-    address: "3001 Wilshire Blvd Ste C, Santa Monica, CA 90403",
-    phone: "(310) 310-8014",
-    hours: ["Mon–Thu 11:30am–10:30pm", "Fri–Sat 11:30am–12am", "Sun 11:30am–9:30pm"],
-    mapsUrl: "https://maps.google.com/?q=3001+Wilshire+Blvd+Santa+Monica+CA+90403",
-    mapEmbedUrl: "https://maps.google.com/maps?q=3001+Wilshire+Blvd+Santa+Monica+CA+90403&output=embed&z=15",
-    pickupUrl: "https://order.toasttab.com/online/jincook-santa-monica",
-    deliveryUrl: "https://www.doordash.com/store/jin-cook-santa-monica-30742940/42525556/?delivery=true",
-  },
-  {
-    id: "dtla",
-    name: "DTLA",
-    fullName: "Jin Cook Downtown LA",
-    address: "337 E 1st St, Los Angeles, CA 90012",
-    phone: "(213) 577-1128",
-    hours: ["Mon–Thu 11:30am–10:30pm", "Fri–Sat 11:30am–12am", "Sun 11:30am–10:30pm"],
-    mapsUrl: "https://maps.google.com/?q=337+E+1st+St+Los+Angeles+CA+90012",
-    mapEmbedUrl: "https://maps.google.com/maps?q=337+E+1st+St+Los+Angeles+CA+90012&output=embed&z=15",
-    pickupUrl: "https://order.toasttab.com/online/jincook-dtlt",
-    deliveryUrl: "https://www.doordash.com/store/jin-cook-los-angeles-33243959/57819146/?delivery=true",
-  },
-];
 
 export default function OrderPage() {
   return (
@@ -62,7 +25,7 @@ export default function OrderPage() {
       <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           {locations.map((loc) => (
-            <article key={loc.id}
+            <article key={loc.id} id={loc.id}
               className="group flex flex-col rounded-2xl bg-background/5 border border-background/10 hover:border-orange/30 overflow-hidden transition-all duration-300">
 
               {/* Map */}
@@ -94,8 +57,8 @@ export default function OrderPage() {
                 </div>
 
                 <div className="border-t border-beige/10 pt-3 space-y-1">
-                  {loc.hours.map((h) => (
-                    <p key={h} className="font-grotesk text-[12px] text-beige/35">{h}</p>
+                  {hoursLines(loc).map((h) => (
+                    <p key={h} className="font-grotesk text-[12px] text-beige/65">{h}</p>
                   ))}
                 </div>
 
@@ -113,10 +76,18 @@ export default function OrderPage() {
                   </a>
                 </div>
 
-                <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer"
-                  className="text-center font-grotesk text-[11px] font-bold uppercase tracking-[0.08em] text-beige/30 hover:text-orange transition-colors">
-                  Get Directions
-                </a>
+                <div className="flex items-center justify-center gap-6">
+                  <Link href={`/menu?location=${loc.id}`}
+                    className="font-grotesk text-[11px] font-bold uppercase tracking-[0.08em] text-beige/60 hover:text-orange transition-colors">
+                    View Menu
+                    <span className="sr-only"> for {loc.name}</span>
+                  </Link>
+                  <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer"
+                    className="font-grotesk text-[11px] font-bold uppercase tracking-[0.08em] text-beige/60 hover:text-orange transition-colors">
+                    Get Directions
+                    <span className="sr-only"> (opens in new tab)</span>
+                  </a>
+                </div>
               </div>
             </article>
           ))}

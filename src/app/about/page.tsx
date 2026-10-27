@@ -120,7 +120,7 @@ export default function AboutPage() {
           <h2 className="font-brush text-[34px] sm:text-[48px] lg:text-[64px] text-background leading-[1.1] mb-6">
             Five Thousand Years on the Table
           </h2>
-          <p className="font-grotesk text-[15px] text-background/45 leading-relaxed max-w-[520px] mx-auto">
+          <p className="font-grotesk text-[15px] text-background/70 leading-relaxed max-w-[520px] mx-auto">
             Korean cuisine is not a trend. It is a living archive — shaped by land, season, and the quiet wisdom of those who cooked before us.
           </p>
         </div>
@@ -184,7 +184,7 @@ export default function AboutPage() {
                 </blockquote>
                 <figcaption className="flex items-center justify-between">
                   <span className="font-grotesk text-[12px] font-bold text-background">{r.name}</span>
-                  <span className="font-grotesk text-[11px] text-beige/30">{r.date}</span>
+                  <span className="font-grotesk text-[11px] text-beige/65">{r.date}</span>
                 </figcaption>
               </figure>
             ))}

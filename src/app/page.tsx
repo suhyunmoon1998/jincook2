@@ -1,51 +1,13 @@
 import Link from "next/link";
 import TextMarquee from "@/components/TextMarquee";
 import LocationCard from "@/components/LocationCard";
+import { locations } from "@/data/locations";
 
-const locations = [
-  {
-    name: "Glendale",
-    fullName: "Jin Cook Glendale",
-    address: "310 N Brand Blvd, Glendale, CA 91203",
-    phone: "(818) 637-7820",
-    hours: ["Mon–Thu 11:30am–11pm", "Fri–Sat 11:30am–12am", "Sun 11:30am–11pm"],
-    mapsUrl: "https://maps.google.com/?q=310+N+Brand+Blvd+Glendale+CA+91203",
-    mapEmbedUrl: "https://maps.google.com/maps?q=310+N+Brand+Blvd+Glendale+CA+91203&output=embed&z=15",
-    instagram: "@jincook_glendale",
-    instagramUrl: "https://www.instagram.com/jincook_glendale/",
-    orderUrl: "https://order.toasttab.com/online/jincook",
-  },
-  {
-    name: "Santa Monica",
-    fullName: "Jin Cook Santa Monica",
-    address: "3001 Wilshire Blvd Ste C, Santa Monica, CA 90403",
-    phone: "(310) 310-8014",
-    hours: ["Mon–Thu 11:30am–10:30pm", "Fri–Sat 11:30am–12am", "Sun 11:30am–9:30pm"],
-    mapsUrl: "https://maps.google.com/?q=3001+Wilshire+Blvd+Santa+Monica+CA+90403",
-    mapEmbedUrl: "https://maps.google.com/maps?q=3001+Wilshire+Blvd+Santa+Monica+CA+90403&output=embed&z=15",
-    instagram: "@jincook_santamonica",
-    instagramUrl: "https://www.instagram.com/jincook_santamonica/",
-    orderUrl: "https://order.toasttab.com/online/jincook-santa-monica",
-  },
-  {
-    name: "Downtown LA",
-    fullName: "Jin Cook Downtown LA",
-    address: "337 E 1st St, Los Angeles, CA 90012",
-    phone: "(213) 577-1128",
-    hours: ["Mon–Thu 11:30am–10:30pm", "Fri–Sat 11:30am–12am", "Sun 11:30am–10:30pm"],
-    mapsUrl: "https://maps.google.com/?q=337+E+1st+St+Los+Angeles+CA+90012",
-    mapEmbedUrl: "https://maps.google.com/maps?q=337+E+1st+St+Los+Angeles+CA+90012&output=embed&z=15",
-    instagram: "@jincookdtla",
-    instagramUrl: "https://www.instagram.com/jincookdtla",
-    orderUrl: "https://order.toasttab.com/online/jincook-dtlt",
-  },
-];
-
-const instagramProfiles = [
-  { handle: "@jincook_santamonica", name: "Santa Monica", url: "https://www.instagram.com/jincook_santamonica/" },
-  { handle: "@jincook_glendale", name: "Glendale", url: "https://www.instagram.com/jincook_glendale/" },
-  { handle: "@jincookdtla", name: "Downtown LA", url: "https://www.instagram.com/jincookdtla" },
-];
+const instagramProfiles = locations.map((l) => ({
+  handle: l.instagram,
+  name: l.name,
+  url: l.instagramUrl,
+}));
 
 export default function Home() {
   return (
@@ -73,8 +35,12 @@ export default function Home() {
                 className="btn-korean inline-flex items-center justify-center rounded-full px-6 py-3.5 sm:px-9 sm:py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-ink active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background">
                 Order Now
               </Link>
-              <Link href="/about"
+              <Link href="/menu"
                 className="inline-flex items-center justify-center rounded-full border border-background/40 px-6 py-3.5 sm:px-9 sm:py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background hover:border-background/80 hover:bg-background/10 active:scale-[0.97] transition-all">
+                View Menu
+              </Link>
+              <Link href="/about"
+                className="inline-flex items-center justify-center rounded-full px-4 py-3.5 sm:px-6 sm:py-4 font-grotesk text-[13px] font-bold uppercase tracking-[0.1em] text-background/70 hover:text-background underline-offset-4 hover:underline active:scale-[0.97] transition-all">
                 Our Story
               </Link>
             </div>
@@ -109,13 +75,13 @@ export default function Home() {
               </h2>
             </div>
             <Link href="/contact"
-              className="font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-beige/50 hover:text-orange transition-colors self-start sm:self-auto">
+              className="font-grotesk text-[12px] font-bold uppercase tracking-[0.1em] text-beige/70 hover:text-orange transition-colors self-start sm:self-auto">
               View All Locations
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {locations.map((loc) => (
-              <LocationCard key={loc.name} {...loc} />
+              <LocationCard key={loc.id} location={loc} />
             ))}
           </div>
         </div>
@@ -153,7 +119,7 @@ export default function Home() {
         <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10">
             <div>
-              <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.16em] text-orange mb-2">
+              <p className="font-grotesk text-[11px] font-bold uppercase tracking-[0.16em] text-green mb-2">
                 Follow Along
               </p>
               <h2 className="font-brush text-[32px] lg:text-[40px] text-ink leading-none">
@@ -168,7 +134,7 @@ export default function Home() {
                 <InstagramIcon className="h-6 w-6 shrink-0 text-orange" />
                 <div className="flex-1 min-w-0">
                   <div className="font-grotesk text-[13px] font-bold text-ink truncate">{p.handle}</div>
-                  <div className="font-grotesk text-[11px] text-ink/40 mt-0.5">{p.name}</div>
+                  <div className="font-grotesk text-[11px] text-ink/70 mt-0.5">{p.name}</div>
                 </div>
                 <svg className="h-4 w-4 text-ink/20 group-hover:text-orange transition-colors shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
