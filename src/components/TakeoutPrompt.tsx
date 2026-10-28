@@ -2,11 +2,15 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function TakeoutPrompt() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const dismissRef = useRef<HTMLButtonElement>(null);
+  const pathname = usePathname();
+  // Already on the order page — the prompt would only be in the way.
+  const onOrderFlow = pathname.startsWith("/order");
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 15000);
@@ -17,7 +21,7 @@ export default function TakeoutPrompt() {
     if (visible && !dismissed) dismissRef.current?.focus();
   }, [visible, dismissed]);
 
-  if (!visible || dismissed) return null;
+  if (!visible || dismissed || onOrderFlow) return null;
 
   return (
     <div
@@ -31,7 +35,7 @@ export default function TakeoutPrompt() {
           ref={dismissRef}
           onClick={() => setDismissed(true)}
           aria-label="Dismiss order prompt"
-          className="absolute top-3 right-3 text-beige/40 hover:text-beige p-1"
+          className="absolute top-3 right-3 text-beige/70 hover:text-beige p-1"
         >
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
             <path d="M1 1l10 10M11 1L1 11"/>
@@ -47,7 +51,7 @@ export default function TakeoutPrompt() {
           <Link
             href="/order"
             onClick={() => setDismissed(true)}
-            className="w-full text-center bg-orange text-ink font-grotesk text-sm font-semibold px-4 py-2.5 rounded-xl hover:bg-[#c95a1e] transition-colors"
+            className="btn btn-primary btn-block"
           >
             Take Out — Order Now
           </Link>
@@ -56,7 +60,7 @@ export default function TakeoutPrompt() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setDismissed(true)}
-            className="w-full text-center bg-white/10 text-beige font-grotesk text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-white/20 transition-colors flex items-center justify-center gap-2"
+            className="btn btn-soft btn-block"
           >
             <MapPinIcon />
             Find Near Jincook

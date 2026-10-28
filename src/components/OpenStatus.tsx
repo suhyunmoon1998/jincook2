@@ -57,14 +57,14 @@ export default function OpenStatus({ hours }: { hours: string[] }) {
 
   return (
     <span
-      className="inline-flex items-center gap-1.5 font-grotesk text-[11px] font-bold uppercase tracking-[0.1em]"
-      style={{ color: open ? "#22c55e" : "#a89880" }}
+      className="inline-flex items-center gap-1.5 font-grotesk text-[13px] font-bold"
+      style={{ color: open ? "#f2c07a" : "#c9bd9a" }}
     >
       <span
         className="w-2 h-2 rounded-full"
-        style={{ backgroundColor: open ? "#22c55e" : "#a89880" }}
+        style={{ backgroundColor: open ? "#f2c07a" : "#c9bd9a" }}
       />
-      {open ? "Open Now" : "Closed"}
+      {open ? "Open now" : "Closed"}
     </span>
   );
 }

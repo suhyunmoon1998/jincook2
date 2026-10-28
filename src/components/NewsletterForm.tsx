@@ -25,7 +25,7 @@ export default function NewsletterForm() {
       />
       <button
         type="submit"
-        className="btn-korean rounded-full px-5 py-2 font-grotesk text-[11px] font-bold uppercase tracking-[0.08em] text-ink active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background whitespace-nowrap"
+        className="btn btn-primary btn-sm"
       >
         Subscribe
       </button>

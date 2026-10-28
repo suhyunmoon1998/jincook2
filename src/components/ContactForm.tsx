@@ -85,7 +85,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="inline-flex items-center justify-center gap-2 rounded-full font-grotesk font-bold uppercase tracking-[0.08em] transition-all duration-150 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 btn-korean text-ink border-2 border-transparent px-9 py-4 text-[15px]"
+        className="btn btn-primary btn-lg"
       >
         Send Message
       </button>
