@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 
 const photos = [
+  { src: "/photos/food-2.jpg", alt: "Dolsot bibimbap stirred in a hot stone bowl" },
+  { src: "/photos/food-6.jpg", alt: "Bibimbap and bulgogi table spread" },
   { src: "/photos/food-4.jpg", alt: "Katsu with rice and banchan" },
   { src: "/photos/food-5.jpg", alt: "Curry katsu hot stone" },
-  { src: "/photos/food-6.jpg", alt: "Bibimbap and bulgogi table spread" },
   { src: "/photos/food-3.jpg", alt: "Steamed dumplings" },
 ];
 

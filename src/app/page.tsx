@@ -5,7 +5,8 @@ import LocationBoard from "@/components/LocationBoard";
 const plates = [
   { src: "/photos/food-6.jpg", ko: "돌솥 불고기 · 돌솥 비빔밥", en: "Hot stone, straight from the fire", className: "col-span-2 row-span-2" },
   { src: "/photos/food-5.jpg", ko: "커리 돈까스", en: "Curry katsu on hot stone", className: "" },
-  { src: "/photos/food-2.jpg", ko: "돌솥밥", en: "Rice on hot stone", className: "row-span-2" },
+  { src: "https://static.wixstatic.com/media/8b8c8d_ac93f76553b840fc98ead9c5c2ef17f4~mv2.jpg", ko: "갈비찜", en: "Braised short rib with vegetables and rice cake", className: "" },
+  { src: "/photos/food-2.jpg", ko: "돌솥 비빔밥", en: "Hot stone bibimbap", className: "" },
   { src: "/photos/food-3.jpg", ko: "찐만두", en: "Steamed pork dumplings", className: "" },
 ];
 
@@ -14,9 +15,9 @@ export default function Home() {
     <div className="bg-background">
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden pt-24 lg:pt-28">
-        <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-6 items-center pb-16 lg:pb-24">
+        <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:grid-cols-[minmax(0,540px)_minmax(0,1fr)] gap-10 lg:gap-6 items-center pb-16 lg:pb-24 xl:pb-32">
           <div className="order-2 lg:order-1">
-            <h1 className="font-brush text-[44px] sm:text-[64px] lg:text-[clamp(48px,5.4vw,84px)] leading-[1.02] text-ink">
+            <h1 className="font-brush text-[44px] sm:text-[64px] lg:text-[clamp(44px,4.6vw,72px)] leading-[1.02] text-ink">
               Korean
               <br />
               soul food,
@@ -37,7 +38,7 @@ export default function Home() {
           </div>
 
           {/* The bowl: video cropped to a circle, offset sun-disc behind it */}
-          <div className="order-1 lg:order-2 relative mx-auto w-[min(78vw,520px)] lg:w-full lg:max-w-[560px] aspect-square">
+          <div className="order-1 lg:order-2 relative mx-auto w-[min(90vw,620px)] lg:ml-auto lg:w-[calc(100%+2.5rem)] lg:max-w-none lg:-mr-10 xl:w-[calc(100%+5rem)] xl:-mr-20 aspect-square">
             <div className="absolute inset-0 translate-x-[7%] translate-y-[5%] rounded-full bg-orange" aria-hidden="true" />
             <div className="absolute inset-0 rounded-full overflow-hidden border-[3px] border-ink bg-ink">
               <video

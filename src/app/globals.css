@@ -32,6 +32,14 @@ body {
   font-family: var(--font-grotesk);
 }
 
+/* Hanji (Korean mulberry paper): fibers and soft mottling tiled over the paper colors */
+body,
+.bg-background,
+.bg-beige {
+  background-image: url("/hanji.svg");
+  background-size: 600px 600px;
+}
+
 /* Accessibility */
 
 /* Text size — 4 levels */
