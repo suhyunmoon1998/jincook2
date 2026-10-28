@@ -5,7 +5,7 @@ import LocationBoard from "@/components/LocationBoard";
 const plates = [
   { src: "/photos/food-6.jpg", ko: "돌솥 불고기 · 돌솥 비빔밥", en: "Hot stone, straight from the fire", className: "col-span-2 row-span-2" },
   { src: "/photos/food-5.jpg", ko: "커리 돈까스", en: "Curry katsu on hot stone", className: "" },
-  { src: "/photos/food-2.jpg", ko: "돌솥밥", en: "Rice on hot stone", className: "row-span-2" },
+  { src: "/photos/food-2.jpg", ko: "돌솥밥 · 갈비찜", en: "Rice on hot stone with galbi jjim", className: "row-span-2" },
   { src: "/photos/food-3.jpg", ko: "찐만두", en: "Steamed pork dumplings", className: "" },
 ];
 
@@ -14,9 +14,9 @@ export default function Home() {
     <div className="bg-background">
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden pt-24 lg:pt-28">
-        <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-6 items-center pb-16 lg:pb-24">
+        <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] gap-10 lg:gap-6 items-center pb-16 lg:pb-24">
           <div className="order-2 lg:order-1">
-            <h1 className="font-brush text-[44px] sm:text-[64px] lg:text-[clamp(48px,5.4vw,84px)] leading-[1.02] text-ink">
+            <h1 className="font-brush text-[44px] sm:text-[64px] lg:text-[clamp(44px,4.9vw,76px)] leading-[1.02] text-ink">
               Korean
               <br />
               soul food,
@@ -37,7 +37,7 @@ export default function Home() {
           </div>
 
           {/* The bowl: video cropped to a circle, offset sun-disc behind it */}
-          <div className="order-1 lg:order-2 relative mx-auto w-[min(78vw,520px)] lg:w-full lg:max-w-[560px] aspect-square">
+          <div className="order-1 lg:order-2 relative mx-auto w-[min(86vw,580px)] lg:w-full lg:max-w-[660px] lg:ml-auto aspect-square">
             <div className="absolute inset-0 translate-x-[7%] translate-y-[5%] rounded-full bg-orange" aria-hidden="true" />
             <div className="absolute inset-0 rounded-full overflow-hidden border-[3px] border-ink bg-ink">
               <video
