@@ -5,7 +5,7 @@ import LocationBoard from "@/components/LocationBoard";
 const plates = [
   { src: "/photos/food-6.jpg", ko: "돌솥 불고기 · 돌솥 비빔밥", en: "Hot stone, straight from the fire", className: "col-span-2 row-span-2" },
   { src: "/photos/food-5.jpg", ko: "커리 돈까스", en: "Curry katsu on hot stone", className: "" },
-  { src: "/photos/food-2.jpg", ko: "돌솥밥 · 갈비찜", en: "Rice on hot stone with galbi jjim", className: "row-span-2" },
+  { src: "/photos/food-2.jpg", ko: "돌솥 비빔밥 · 갈비찜", en: "Hot stone bibimbap and braised short rib", className: "row-span-2" },
   { src: "/photos/food-3.jpg", ko: "찐만두", en: "Steamed pork dumplings", className: "" },
 ];
 
