@@ -6,7 +6,7 @@ const plates = [
   { src: "/photos/food-6.jpg", ko: "돌솥 불고기 · 돌솥 비빔밥", en: "Hot stone, straight from the fire", className: "col-span-2 row-span-2" },
   { src: "/photos/food-5.jpg", ko: "커리 돈까스", en: "Curry katsu on hot stone", className: "" },
   { src: "https://static.wixstatic.com/media/8b8c8d_ac93f76553b840fc98ead9c5c2ef17f4~mv2.jpg", ko: "갈비찜", en: "Braised short rib with vegetables and rice cake", className: "" },
-  { src: "/photos/food-2.jpg", ko: "돌솥 비빔밥", en: "Hot stone bibimbap", className: "" },
+  { src: "https://static.wixstatic.com/media/8b8c8d_05d5059cf7264c9aac3ac6dfa760f27a~mv2.jpg", ko: "돼지 국밥", en: "Pork broth, sliced pork, chives and flour noodle", className: "" },
   { src: "/photos/food-3.jpg", ko: "찐만두", en: "Steamed pork dumplings", className: "" },
 ];
 
