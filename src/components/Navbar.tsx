@@ -14,7 +14,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -31,15 +30,9 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKey);
   }, [menuOpen]);
 
-  // Home: transparent → bg-ink on scroll; other pages: bg-background border-b border-beige always
-  const navBg = isHome
-    ? scrolled || menuOpen
-      ? "bg-ink"
-      : "bg-transparent"
-    : "bg-background border-b border-beige";
-
-  const textColor = isHome ? "text-background" : "text-ink";
-  const activeIndicator = isHome ? "bg-background" : "bg-ink";
+  const navBg = scrolled || menuOpen ? "bg-background border-b-2 border-ink" : "bg-background border-b-2 border-transparent";
+  const textColor = "text-ink";
+  const activeIndicator = "bg-orange";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 h-14 lg:h-16 flex items-center transition-all duration-300 ${navBg}`}>
@@ -54,7 +47,7 @@ export default function Navbar() {
             alt="Jin Cook"
             width={120}
             height={48}
-            className={`h-10 lg:h-12 w-auto object-contain ${!isHome ? "" : "brightness-0 invert"}`}
+            className={`h-10 lg:h-12 w-auto object-contain `}
             priority
           />
         </Link>
@@ -67,7 +60,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative font-grotesk text-[15px] font-medium uppercase tracking-[0.03em] transition-opacity duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange ${textColor} ${active ? "opacity-100" : "opacity-90 hover:opacity-100"}`}
+                className={`relative font-grotesk text-[15px] font-medium transition-opacity duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange ${textColor} ${active ? "opacity-100" : "opacity-90 hover:opacity-100"}`}
               >
                 {link.label}
                 {active && (
@@ -83,7 +76,7 @@ export default function Navbar() {
             href="/order"
             className="btn btn-primary btn-sm"
           >
-            Order Now
+            Order now
           </Link>
         </div>
 
@@ -94,21 +87,21 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
-          <span className={`block h-0.5 w-6 transition-all duration-200 ${isHome ? "bg-background" : "bg-ink"} ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block h-0.5 w-6 transition-all duration-200 ${isHome ? "bg-background" : "bg-ink"} ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block h-0.5 w-6 transition-all duration-200 ${isHome ? "bg-background" : "bg-ink"} ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span className={`block h-0.5 w-6 transition-all duration-200 bg-ink ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block h-0.5 w-6 transition-all duration-200 bg-ink ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-0.5 w-6 transition-all duration-200 bg-ink ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <nav aria-label="Mobile navigation" className="absolute top-14 left-0 right-0 bg-ink border-t border-background/10 px-6 py-6 flex flex-col gap-5 lg:hidden">
+        <nav aria-label="Mobile navigation" className="absolute top-14 left-0 right-0 bg-background border-b-2 border-ink px-6 py-6 flex flex-col gap-5 lg:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-grotesk text-base font-medium uppercase tracking-[0.03em] text-background opacity-90 hover:opacity-100 py-3"
+              className="font-grotesk text-base font-medium text-ink py-3"
             >
               {link.label}
             </Link>
@@ -118,7 +111,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen(false)}
             className="btn btn-primary btn-block mt-2"
           >
-            Order Now
+            Order now
           </Link>
         </nav>
       )}
