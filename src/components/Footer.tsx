@@ -4,9 +4,13 @@ export default function Footer() {
   return (
     <footer className="bg-ink">
       <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="font-grotesk text-xs text-beige/65">
-          © {new Date().getFullYear()} Jin Cook. All rights reserved.
-        </p>
+        <div className="font-grotesk text-xs text-beige/65 text-center sm:text-left space-y-1">
+          <p>© {new Date().getFullYear()} Jin Cook. All rights reserved.</p>
+          <p>
+            Jin Cook DTLA is operated by Hansik DTLT, Inc · Jin Cook Glendale is operated by P-Kura Concept, Inc ·
+            Jin Cook Santa Monica is operated by GKF Restaurant, Inc
+          </p>
+        </div>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
           <Link href="/order" className="font-grotesk text-xs text-beige/65 hover:text-beige transition-colors">
             Order
