@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LocationContacts from "@/components/LocationContacts";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Jin Cook",
@@ -12,7 +13,7 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--color-muted)" }}>
-          <p>Last updated: January 1, 2025</p>
+          <p>Last updated: November 10, 2026</p>
           <Section title="Information We Collect">
             We collect information you provide directly to us, such as when you contact us, sign up for our newsletter, or place an order. This may include your name, email address, and message content.
           </Section>
@@ -21,12 +22,13 @@ export default function PrivacyPage() {
           </Section>
           <Section title="Information Sharing">
             We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our website.
+            <p className="mt-3">
+              Mobile information and SMS consent will not be shared with third parties or affiliates for marketing or promotional purposes. Mobile phone numbers collected are used only to send the text messages you request. Text messaging originator opt-in data and consent will not be shared with any third parties.
+            </p>
           </Section>
           <Section title="Contact Us">
-            If you have questions about this privacy policy, please contact us at{" "}
-            <a href="mailto:hello@jincook.com" className="underline hover:opacity-70" style={{ color: "var(--color-text)" }}>
-              hello@jincook.com
-            </a>.
+            If you have questions about this privacy policy, please contact the location nearest you:
+            <LocationContacts />
           </Section>
         </div>
       </div>
@@ -38,7 +40,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   return (
     <div>
       <h2 className="text-lg font-semibold mb-2" style={{ color: "var(--color-text)" }}>{title}</h2>
-      <p>{children}</p>
+      <div>{children}</div>
     </div>
   );
 }
