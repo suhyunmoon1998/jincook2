@@ -3,6 +3,7 @@ import LocationContacts from "@/components/LocationContacts";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Jin Cook",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

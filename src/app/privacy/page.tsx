@@ -3,6 +3,7 @@ import LocationContacts from "@/components/LocationContacts";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Jin Cook",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {

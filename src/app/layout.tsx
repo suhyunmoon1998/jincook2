@@ -5,10 +5,23 @@ import Footer from "@/components/Footer";
 import AccessibilityBar from "@/components/AccessibilityBar";
 import TakeoutPrompt from "@/components/TakeoutPrompt";
 import IntroVideo from "@/components/IntroVideo";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Jin Cook — Authentic Korean Soul Food | Los Angeles",
-  description: "Three locations. One soul. Handcrafted banchan, slow-braised meats, and flavors passed down through generations.",
+  metadataBase: new URL(SITE_URL),
+  title: "Jin Cook | Korean Restaurant in Glendale, Santa Monica & Downtown LA",
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "en_US",
+    url: "/",
+    title: "Jin Cook | Korean Restaurant in Glendale, Santa Monica & Downtown LA",
+    description: SITE_DESCRIPTION,
+    images: [{ url: "/photos/food-5.jpg", width: 1200, height: 1200, alt: "Curry katsu served on a hot stone at Jin Cook" }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({

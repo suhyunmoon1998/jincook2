@@ -4,6 +4,7 @@ import LocationBoard from "@/components/LocationBoard";
 export const metadata: Metadata = {
   title: "Order Online | Jin Cook Korean Restaurant",
   description: "Order Jin Cook online for pickup or delivery from Glendale, Santa Monica, or Downtown LA.",
+  alternates: { canonical: "/order" },
 };
 
 export default function OrderPage() {

@@ -5,6 +5,7 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 export const metadata: Metadata = {
   title: "Our Story | Jin Cook",
   description: "Born in a home kitchen, grown across Los Angeles. The story behind Jin Cook Korean soul food.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [

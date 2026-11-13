@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import LocationBoard from "@/components/LocationBoard";
+import RestaurantJsonLd from "@/components/RestaurantJsonLd";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const plates = [
   { src: "/photos/food-6.jpg", ko: "돌솥 불고기 · 돌솥 비빔밥", en: "Hot stone, straight from the fire", className: "col-span-2 row-span-2" },
@@ -13,6 +19,7 @@ const plates = [
 export default function Home() {
   return (
     <div className="bg-background">
+      <RestaurantJsonLd />
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden pt-24 lg:pt-28">
         <div className="mx-auto max-w-8xl px-6 md:px-10 lg:px-20 grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:grid-cols-[minmax(0,540px)_minmax(0,1fr)] gap-10 lg:gap-6 items-center pb-16 lg:pb-24 xl:pb-32">

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import LocationBoard from "@/components/LocationBoard";
 
 export const metadata: Metadata = {
-  title: "Locations | Jin Cook",
-  description: "Find a Jin Cook near you in Glendale, Santa Monica, or Downtown LA.",
+  title: "Locations & Hours | Jin Cook Korean Restaurant",
+  description: "Jin Cook Korean restaurants in Glendale (310 N Brand Blvd), Santa Monica (3001 Wilshire Blvd) and Downtown LA (337 E 1st St). Hours, phone numbers and directions.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
