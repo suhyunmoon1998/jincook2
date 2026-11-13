@@ -32,7 +32,7 @@ export default function Home() {
               bowl by bowl.
             </h1>
             <p className="mt-6 max-w-[30rem] text-[17px] leading-[1.75] text-ink/80">
-              Hot soups, hot stone rice and slow-braised meats, cooked at three kitchens across Los Angeles.
+              Soft tofu stew (<span lang="ko">순두부</span>), beef short rib soup (<span lang="ko">갈비탕</span>), pork soup (<span lang="ko">돼지국밥</span>), hot stone bibimbap and slow-braised short rib, cooked at three kitchens across Los Angeles.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link href="/order" className="btn btn-primary btn-lg">

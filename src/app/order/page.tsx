@@ -3,7 +3,7 @@ import LocationBoard from "@/components/LocationBoard";
 
 export const metadata: Metadata = {
   title: "Order Online | Jin Cook Korean Restaurant",
-  description: "Order Jin Cook online for pickup or delivery from Glendale, Santa Monica, or Downtown LA.",
+  description: "Order Korean soft tofu stew (순두부), galbitang, hot stone bibimbap and more for pickup or delivery from Jin Cook in Glendale, Santa Monica or Downtown LA.",
   alternates: { canonical: "/order" },
 };
 

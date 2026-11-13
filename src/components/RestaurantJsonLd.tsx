@@ -34,6 +34,8 @@ function restaurant(loc: Location) {
     logo: `${SITE_URL}/logo.png`,
     telephone: `+1${loc.phone.replace(/\D/g, "")}`,
     servesCuisine: "Korean",
+    keywords:
+      "Korean restaurant, soondubu, soft tofu stew, 순두부, galbitang, 갈비탕, seolleongtang, 설렁탕, yukgaejang, 육개장, budae jjigae, 부대찌개, dwaeji gukbap, 돼지국밥, dolsot bibimbap, 돌솥 비빔밥, galbi jjim, 갈비찜, bulgogi, jeyuk, korean bbq, tteokbokki, korean pancake, korean dumplings, curry katsu",
     address: {
       "@type": "PostalAddress",
       streetAddress: a.street,
